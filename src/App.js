@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import MovieCard from "./MovieCard";
 import "./App.css";
@@ -17,6 +18,7 @@ const API_URL = "https://www.omdbapi.com/?apikey=ab013f44";
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
@@ -56,6 +58,8 @@ const App = () => {
           <h2>No movies found</h2>
         </div>
       )}
+
+      <button onClick={() => navigate("/about-us")}>About Us</button>
     </div>
   );
 };

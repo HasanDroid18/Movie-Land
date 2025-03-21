@@ -89,6 +89,23 @@ h1 {
   box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
 } */
 
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9d3b4;
+  color: #212426;
+  font-family: var(--font-raleway);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e8c3a3;
+}
+
 .empty {
   width: 100%;
   margin-top: 3rem;
